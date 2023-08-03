@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Courier New';
+    font-family: 'Courier New', monospace;
 }
 
 body {
@@ -9,24 +9,42 @@ body {
     justify-content: center;
     align-items: center;
     height: 95vh;
+    background-color: rgba(221, 247, 238, 0.726);
 }
 
 #calculator {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    outline: solid;
-    padding: 5px;
+    padding: 10px;
     width: 35vw;
+    border: solid;
+    border-radius: 8px;
+    background-color: rgb(53, 59, 78);
 }
 
 #display {
     height: 5rem;
-    border: solid;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
+    border: solid;
+    border-radius: 10px;
+    background-color: rgb(175, 177, 179);
     font-size: 10vmin;
+    padding-right: 10px;
+}
+
+#display p {
+    font-family: monospace;
+    font-weight: 500;
+}
+
+#operator-indicator {
+    font-size: 4vmin;
+    align-self: flex-start;
+    padding-left: 5px;
 }
 
 .row {
@@ -39,8 +57,31 @@ button {
     height: 6rem;
     font-size: 25px;
     flex-basis: calc(100% / 4 - 5px);
+
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/*! applied when button is clicked */
+.clicked {
+    filter: brightness(1.50);
+    cursor: pointer;
 }
 
 .xtra-wide {
     flex-basis: calc(2 * (100% / 4) - 5px);
+}
+
+/* button styles */
+.clear, .sign {
+    background-color: rgb(90, 192, 90);
+}
+
+.operator, .equals {
+    background-color: rgb(69, 126, 126);
+}
+
+.operand, .decimal {
+    background-color: rgb(73, 107, 202);
 }

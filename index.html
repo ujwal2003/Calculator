@@ -9,38 +9,41 @@
 </head>
 <body>
     <div id="calculator">
-        <div id="display">0</div>
+        <div id="display">
+            <p id="operand-display">0</p>
+            <p id="operator-indicator"></p>
+        </div>
         <div class="row">
-            <button type="button" class="clear xtra-wide">clear</button>
-            <button type="button" class="sign">+/-</button>
-            <button type="button" class="operator">/</button>
+            <button type="button" value="clr" class="clear xtra-wide">clear</button>
+            <button type="button" value="sign" class="sign">+/-</button>
+            <button type="button" value="op_divide" class="operator">/</button>
         </div>
 
         <div class="row">
-            <button type="button" class="operand">7</button>
-            <button type="button" class="operand">8</button>
-            <button type="button" class="operand">9</button>
-            <button type="button" class="operator">*</button>
+            <button type="button" value="7" class="operand">7</button>
+            <button type="button" value="8" class="operand">8</button>
+            <button type="button" value="9" class="operand">9</button>
+            <button type="button" value="op_mult" class="operator">*</button>
         </div>
         
         <div class="row">
-            <button type="button" class="operand">4</button>
-            <button type="button" class="operand">5</button>
-            <button type="button" class="operand">6</button>
-            <button type="button" class="operator">+</button>
+            <button type="button" value="4" class="operand">4</button>
+            <button type="button" value="5" class="operand">5</button>
+            <button type="button" value="6" class="operand">6</button>
+            <button type="button" value="op_add" class="operator">+</button>
         </div>
         
         <div class="row">
-            <button type="button" class="operand">1</button>
-            <button type="button" class="operand">2</button>
-            <button type="button" class="operand">3</button>
-            <button type="button" class="operator">-</button>
+            <button type="button" value="1" class="operand">1</button>
+            <button type="button" value="2" class="operand">2</button>
+            <button type="button" value="3" class="operand">3</button>
+            <button type="button" value="op_sub" class="operator">-</button>
         </div>
 
         <div class="row">
-            <button type="button" class="operand xtra-wide">0</button>
-            <button type="button" class="decimal">.</button>
-            <button type="button" class="equals">=</button>
+            <button type="button" value="0" class="operand xtra-wide">0</button>
+            <button type="button" value="dec" class="decimal">.</button>
+            <button type="button" value="solve" class="equals">=</button>
         </div>
     </div>
 </body>
