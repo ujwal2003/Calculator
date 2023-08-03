@@ -25,6 +25,7 @@ function run(cmd) {
             numDisplay.textContent = "0";
             opDisplay.textContent = "";
             currOperation = null;
+            currNum = "0";
         return;
 
         case "op_divide":
@@ -57,10 +58,16 @@ function run(cmd) {
 }
 
 function displayNumbers(numStr) {
-    if(currNum.length === 1 && currNum[0] === '0')
-        currNum = numStr;
-    else
+    if(currNum.length === 1 && currNum[0] === '0') {
+        currNum = (numStr === "sign") ? currNum : numStr;
+    } else if(numStr === "sign") {
+        if(currNum[0] === '-')
+            currNum = currNum.slice(1);
+        else
+            currNum = "-" + currNum;
+    } else {
         currNum = currNum.concat(numStr);
+    }
 
     numDisplay.textContent = currNum;
 }
