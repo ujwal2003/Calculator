@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    outline: solid;
+    padding: 5px;
+    width: 35vw;
+}
+
+#display {
+    height: 5rem;
+    border: solid;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-size: 10vmin;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+button {
+    height: 6rem;
+    font-size: 25px;
+    flex-basis: calc(100% / 4 - 5px);
+}
+
+.xtra-wide {
+    flex-basis: calc(2 * (100% / 4) - 5px);
+}
