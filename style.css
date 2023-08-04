@@ -34,6 +34,8 @@ body {
     background-color: rgb(175, 177, 179);
     font-size: 10vmin;
     padding-right: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 #display p {
