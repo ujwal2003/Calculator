@@ -15,10 +15,10 @@ buttons.forEach(button => {
 
     button.addEventListener("mouseup", function(e) {
         this.classList.remove("clicked");
-        // console.log(numArr);
-        // console.log(`currNum: ${currNum}`);
-        // console.log(`currOperation: ${currOperation}`);
-        // console.log("=====");
+        console.log(numArr);
+        console.log(`currNum: ${currNum}`);
+        console.log(`currOperation: ${currOperation}`);
+        console.log("=====");
     });
 });
 
@@ -51,6 +51,11 @@ function run(cmd) {
             runOperation();
             opDisplay.textContent = currOperation = "-";
         return;
+
+        case "dec":
+            currNum = currNum + ".";
+            numDisplay.textContent = currNum;
+            return;
 
         case "solve":
             opDisplay.textContent = "";
@@ -114,8 +119,8 @@ function operate(num1, op, num2) {
     if(!num1 || !op || !num2)
         return "ERROR";
 
-    num1 = parseInt(num1);
-    num2 = parseInt(num2);
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
 
     switch(op) {
         case '+':
